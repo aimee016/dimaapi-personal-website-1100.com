@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Random Facts</title>
+<head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+  max-height: 100vh;
+}
+
+#BGVideo {
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 50%;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.absolute-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#PauseNPlay {
+  width: 100px;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+#PauseNPlay:hover {
+  background: #ddd;
+  color: black;
+}
+
+#Home {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #8096fc;
+  color: #050404;
+  cursor: pointer;}
+#Home: hover {
+  background: #CCCCFF;
+  color: #050404;}
+
+#About {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #78ffc0;
+  color:  #050404;
+  cursor: pointer;}
+#About:hover {
+  background: #aeffd9;
+  color:  #050404;}
+
+#Hobbies {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #ffd078;
+  color:  #050404;
+  cursor: pointer;}
+#Hobbies:hover {
+  background: #ffe2ae;
+  color:  #050404;}
+
+#Random {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #78ff9a;
+  color:  #050404;
+  cursor: pointer;}
+#Random:hover {
+  background: #99FFCC;
+  color:  #050404;}
+
+#Gallery {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #78ffff;
+  color:  #050404;
+  cursor: pointer;}
+#Gallery:hover {
+  background: #CCFFFF;
+  color:  #050404;}
+
+
+#Contact {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #ff7878;
+  color:  #050404;
+  cursor: pointer;}
+#Contact:hover {
+  background:  #FFCCCC;
+  color:  #050404;} 
+
+.main {
+  height: calc(100vh - 81px);
+  max-height: calc(100vh - 81px);
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  color:#fcf7f7;
+}
+h1{
+    color: #e5e4e2;
+    font-size:xx-large;}
+h5{
+  color:#fff5ee;
+}
+
+</style>
+</head>
+<body>
+    <video autoplay muted loop id="BGVideo">
+        <source src="lapse.mp4" type="video/mp4">
+      </video>
+
+      <div class="absolute-container">
+        <div class="content">
+         <a href="index.html"><button id="Home">Home</button></a>
+         <a href="about.html"><button id="About">About</button></a>
+         <a href=hobbies.html><button id="Hobbies">Hobbies</button></a>
+         <a href="facts.html"><button id="Random">Random Facts</button></a> 
+         <a href="gallery.html"><button id="Gallery">Gallery</button></a>
+         <a href="contact.html"><button id="Contact">Contact</button></a>
+         <button id="PauseNPlay" onclick="myFunction()">Pause</button>
+        
+        </div>
+
+        <div class="main"> 
+          <h1>Random Facts about me</h1>
+          <br>
+          <h5><i>These are just facts that I think are interesting about me.</i></h5>
+          <br>
+          
+          <p>•I don't wear ripped jeans because my grandma once complained to me<br>
+about my aunt wearing them and her fixing them</p>
+          <br>
+          <p>•The junior high I used to attend is now a burger joint</p> 
+          <br>
+          <p>•I am the eldest granchild on my mother's side<br>
+          </p>
+          <br>
+       
+          <p>•I am a bookworm, I have a shelf full of books. I have given some away<br>
+but some of my books became infested with termites</p> 
+            <br>
+          <p>•I am 89% introverted, my personality type is INTP-T</p> 
+            <br>
+          <p>•I am very short for my age</p>
+      </div>
+    </div>
+
+<script>
+var video = document.getElementById("BGVideo");
+var btn = document.getElementById("PauseNPlay");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</div>
+</body>
+</html>

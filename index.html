@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Website</title>
+<head><link rel="stylesheet" type="text/css" href="style.css"/></head>
+</head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+
+#BGVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 50%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#PauseNPlay {
+  width: 100px;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+#PauseNPlay:hover {
+  background: #ddd;
+  color: black;
+}
+
+#Home {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #8096fc;
+  color: #050404;
+  cursor: pointer;}
+#Home: hover {
+  background: #CCCCFF;
+  color: #050404;}
+
+#About {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+ border-radius: 10px;
+  background: #78ffc0;
+  color:  #050404;
+  cursor: pointer;}
+#About:hover {
+  background: #aeffd9;
+  color:  #050404;}
+
+#Hobbies {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+ border-radius: 10px;
+  background: #ffd078;
+  color:  #050404;
+  cursor: pointer;}
+#Hobbies:hover {
+  background: #ffe2ae;
+  color:  #050404;}
+
+#Random {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #78ff9a;
+  color:  #050404;
+  cursor: pointer;}
+#Random:hover {
+  background: #99FFCC;
+  color:  #050404;}
+
+#Gallery {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #78ffff;
+  color:  #050404;
+  cursor: pointer;}
+#Gallery: hover {
+  background: #CCFFFF;
+  color:  #050404;}
+
+
+#Contact {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #ff7878;
+  color:  #050404;
+  cursor: pointer;}
+#Contact:hover {
+  background:  #FFCCCC;
+  color:  #050404;} 
+
+</style>
+<body>
+
+<video autoplay muted loop id="BGVideo">
+  <source src="lapse.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1>Welcome!</h1>
+  <p>Hi! I am Aimee Denise C. Dimaapi, a third-year student of Polytechnic University of the Philippines.</p>
+  <p>To get to know more about me, click any of these buttons below!</p>
+  <a href="index.html"><button id="Home">Home</button></a>
+  <a href="about.html"><button id="About">About</button></a>
+  <a href=hobbies.html><button id="Hobbies">Hobbies</button></a>
+  <a href="facts.html"><button id="Random">Random Facts</button></a>
+  <a href="gallery.html"><button id="Gallery">Gallery</button></a>
+  <a href="contact.html"><button id="Contact">Contact</button></a>
+  <button id="PauseNPlay" onclick="myFunction()">Pause Background</button>
+  
+</div>
+
+<script>
+var video = document.getElementById("BGVideo");
+var btn = document.getElementById("PauseNPlay");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
